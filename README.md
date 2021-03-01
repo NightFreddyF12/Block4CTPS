@@ -23,9 +23,7 @@ My programming experience from last year helped me with learning more about codi
 10th Grade Year: In 2-5 sentences, describe each of the programming projects you’ve completed this year.  Think back to Block 1, Block 2/3, and your Passion Project (if that applies).
 
 
-_____________________________________________________________________________________
-_____________________________________________________________________________________
-_____________________________________________________________________________________
+This year, my programming experience has been expanded a bit more; I made a card dealing program and a dice rolling program. I loved making these programs and I would love to make something like it again.
 
 
 
