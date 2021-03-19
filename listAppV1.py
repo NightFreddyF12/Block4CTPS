@@ -8,17 +8,21 @@ Program Goals:
 
 """
 
+import random
+myList = []
+
 def mainProgram():
     while True:
         try:
             print("Hello, there! Let's work with lists!")
             print("Choose from the following options. Type a number below!")
-            choice = input("""1. Add to a list or
+            choice = input("""1. Add to a list
 2. Add a bunch of numbers
 3. Return the value at an index
 4. Random search
-5. Print contents of list
-6. Quit Program   """)
+5. Linear search
+6. Print contents of list
+7. Quit Program   """)
             if choice == "1":
                 addToList()
             elif choice == "2":
@@ -28,6 +32,8 @@ def mainProgram():
             elif choice == "4":
                 randomSearch()
             elif choice == "5":
+                linearSearch()
+            elif choice == "6":
                 print(myList)
             else:
                 break
@@ -58,11 +64,13 @@ def randomSearch():
 
 def linearSearch():
     print("We're gonna check out each item one at a time in your list! This sucks.")
-    searchItem = input("Whatcha lookin' for, pardner?")
+    searchItem = input("Whatcha lookin' for, pardner?   ")
     for x in range(len(myList)):
         if myList[x] == int(searchItem):
-            print("Your item is at inder position ()".format(x))
+            print("Your item is at index position ()".format(x))
 
+def secret():
+    print("Hello!")
 
 if __name__ == "__main__":
     mainProgram()
