@@ -10,6 +10,7 @@ Program Goals:
 
 import random
 myList = []
+unique_list = []
 
 def mainProgram():
     while True:
@@ -21,7 +22,7 @@ def mainProgram():
 3. Return the value at an index
 4. Random search
 5. Linear search
-6. Print contents of list
+6. Sort list
 7. Quit Program   """)
             if choice == "1":
                 addToList()
@@ -34,7 +35,7 @@ def mainProgram():
             elif choice == "5":
                 linearSearch()
             elif choice == "6":
-                print(myList)
+                sortList(myList)
             else:
                 break
         except:
@@ -58,6 +59,16 @@ def indexValues():
     indexPos = input("What index position are you curious about?   ")
     print(myList[int(indexPos)])
 
+def sortList(myList):
+    print("A little birdie told me you needed some sorted data!")
+    for x in myList:
+        if x not in unique_list:
+            unique_list.append(x)
+    unique_list.sort()
+    showMe = input("Wanna see your new list?   Y/N")
+    if showMe.lower() == "y":
+        print(unique_list)
+
 def randomSearch():
     print("RaNdOm SeArCh?!?")
     print(myList[random.randint(0, len(myList)-1)])
@@ -69,8 +80,26 @@ def linearSearch():
         if myList[x] == int(searchItem):
             print("Your item is at index position ()".format(x))
 
-def secret():
-    print("Hello!")
+def printLists():
+    if len(unique_list) == 0:
+        print(myList)
+    else:
+        whichOne = input("Which list? Sorted or unsorted?    ")
+        if whichOne.lower == "sorted":
+            print(unique_list)
+        else:
+            print(myList)
+
+#def password():
+    #answer == "*t4],DTvTL7pR;cTW/+R3Rl;BY~SNYk=)h@Tmeu\SV"
+    #if input == "Password":
+        #try:
+            #print("What is the password?")
+            #if answer == "*t4],DTvTL7pR;cTW/+R3Rl;BY~SNYk=)h@Tmeu\SV":
+                #print("The Answer to the Ultimate Question of Life, the Universe, and Everything... is 42")
+            #else:
+                #print("WRONG!")
+        #break
 
 if __name__ == "__main__":
     mainProgram()
