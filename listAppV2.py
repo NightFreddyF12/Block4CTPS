@@ -110,7 +110,7 @@ def recursiveBinarySearch(unique_list, low, high, x):
     if high >= low:
         mid = (high + low) // 2
         if unique_list[mid] == x:
-            print("Your number is at index position {}".format(mid))
+            print("You ding dang found your number at index position {}!".format(mid))
             return mid
         elif unique_list[mid] > x:
             return recursiveBinarySearch(unique_list, low, mid - 1, x)
